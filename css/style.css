@@ -16,12 +16,32 @@
 .Color-palette-for-colourists,-Цветовая-палитра--4-hex { color: #730606; }
 .Color-palette-for-colourists,-Цветовая-палитра--5-hex { color: #A60A0A; }
 
+/* Color Theme Swatches in Hex */
+.салон-красоты-1-hex { color: #912346; }
+.салон-красоты-2-hex { color: #5ACB4A; }
+.салон-красоты-3-hex { color: #131429; }
+.салон-красоты-4-hex { color: #EFF0F4; }
+.салон-красоты-5-hex { color: #A58183; }
+
+/* Color Theme Swatches in RGBA */
+.салон-красоты-1-rgba { color: rgba(144, 35, 70, 1); }
+.салон-красоты-2-rgba { color: rgba(89, 202, 73, 1); }
+.салон-красоты-3-rgba { color: rgba(18, 20, 40, 1); }
+.салон-красоты-4-rgba { color: rgba(239, 239, 244, 1); }
+.салон-красоты-5-rgba { color: rgba(165, 128, 131, 1); }
+
+/* Color Theme Swatches in HSLA */
+.салон-красоты-1-hsla { color: hsla(340, 61, 35, 1); }
+.салон-красоты-2-hsla { color: hsla(112, 55, 54, 1); }
+.салон-красоты-3-hsla { color: hsla(237, 36, 11, 1); }
+.салон-красоты-4-hsla { color: hsla(228, 18, 94, 1); }
+.салон-красоты-5-hsla { color: hsla(356, 16, 57, 1); }
 
 
 html, body{
   font-family: 'PT Sans', sans-serif;
   height: 100%;
-  background: #996478;
+  background: #912346;
 }
 .wrapper {
   min-height: 100%;
@@ -33,11 +53,19 @@ html, body{
 }
 
 .container {
+  /* display: flex;
+  flex-direction: column; */
+  justify-content: center;
+  align-items: center;
   max-width: 1180px;
   margin: 0px auto;
-  padding: 0px 10px 0px 10px;
+  padding: 0px 10px;
 }
-
+@media (min-width: 1300px) {
+  .container {
+    max-width: 100%;
+  }
+}
 .header {
   position: fixed;
   width: 100%;
@@ -52,7 +80,7 @@ html, body{
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #9E99BF;
+  background-color: #131429;
   z-index: 2;
 }
 
@@ -96,7 +124,6 @@ html, body{
 .header__list li {
   list-style: none;
   margin: 0px 0px 0px 20px;
-
 }
 
 .header__link {
@@ -105,6 +132,11 @@ html, body{
   text-transform: uppercase;
   font-size: 20px;
 }
+.header__link:hover {
+  color: #A58183;
+}
+
+
 @media (max-width: 767px){
   body.lock{
     overflow: hidden;
@@ -184,8 +216,8 @@ html, body{
     left: 0;
     width: 100%;
     height: 100%;
-    background: #7E4C51;
-    padding: 70px 10px 20px 20px;
+    background: #5ACB4A;
+    padding: 70px 20px 20px;
     transition: all 0.3s ease 0s;
     -webkit-transition: all 0.3s ease 0s;
     -moz-transition: all 0.3s ease 0s;
@@ -207,6 +239,7 @@ html, body{
 
 .main {
   flex: 1 1 auto;
+  
 }
 
 .content {}
@@ -215,10 +248,9 @@ html, body{
   color: white;
   font-size: 20px;
   line-height: 20px;
-  margin: 80px 20px 0px 0px;
+  margin: 80px 0px 20px 0px;
 }
 .greet {
-  
   display: flex;
   min-height: 60vh;
   margin: 0px 0px 10px 0px;
@@ -226,19 +258,30 @@ html, body{
   line-height: 1.2;
   
 }
+
+@media (max-width: 600px) {
+  .content__text {
+    
+    margin: 50px 20px 0px 0px;
+  }
+  .greet {
+    display: block;
+  }
+}
+
 .greet__image {
   max-height: 100%;
-  
   object-fit: cover;
   flex: 1 1 30%;
+  
 }
 .greet__image img{
-
+  justify-content: center;
+  align-items: center;
   max-height: 100%;
   max-width: 100%;
   object-fit: cover;
 }
-
 .greet__body {
   flex: 1 1 70%;
   margin: 10px;
@@ -262,7 +305,7 @@ html, body{
   margin: 20px 10px;
 }
 .services {
-  margin: 10px 0px;
+  margin: 30px 10px;
 }
 .services__body {
   display: flex;
@@ -310,6 +353,7 @@ h2 {
   -o-border-radius: 5px;
 }
 .workplace {
+  
 }
 .container {
 }
@@ -387,7 +431,7 @@ h2 {
 .container {
 }
 .footer__body {
-  background-color: #73060694;
+  background-color: #730606b0;
   display: flex;
 }
 .footer__column {
