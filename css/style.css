@@ -1,20 +1,84 @@
-*, *::before, *::after{
-  padding: 0;
-  margin: 0;
+/* Обнуление страницы */
+
+* {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* Color Theme Swatches in Hex */
-.andre-1-hex { color: #FDE6F8; }
-.andre-2-hex { color: #E0C6D7; }
-.andre-3-hex { color: #CCA1B4; }
-.andre-4-hex { color: #996478; }
-.andre-5-hex { color: #7E4C51; }
-/* Color Theme Swatches in Hex */
-.Color-palette-for-colourists,-Цветовая-палитра--1-hex { color: #9E99BF; }
-.Color-palette-for-colourists,-Цветовая-палитра--2-hex { color: #F2F2F2; }
-.Color-palette-for-colourists,-Цветовая-палитра--3-hex { color: #D9C8A9; }
-.Color-palette-for-colourists,-Цветовая-палитра--4-hex { color: #730606; }
-.Color-palette-for-colourists,-Цветовая-палитра--5-hex { color: #A60A0A; }
+:focus,
+:active {
+  outline: none;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+aside,
+nav,
+footer,
+header,
+section {
+  display: block;
+}
+html,
+body {
+  height: 100%;
+  /* min-width: 1180px; */
+}
+body {
+  line-height: 1;
+  font-family: $fontFamily;
+  //text-rendering: optimizeLegibility;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+input,
+button,
+textarea {
+  font-family: $fontFamily;
+}
+input::-ms-clear {
+  display: none;
+}
+button {
+  cursor: pointer;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+//-webkit-overflow-scrolling: touch;
+//animation-play-state: paused !important;
 
 /* Color Theme Swatches in Hex */
 .салон-красоты-1-hex { color: #912346; }
@@ -37,11 +101,28 @@
 .салон-красоты-4-hsla { color: hsla(228, 18, 94, 1); }
 .салон-красоты-5-hsla { color: hsla(356, 16, 57, 1); }
 
+/* 
+.салон-красоты-1-hex { color: #1E2528; }
+.салон-красоты-2-hex { color: #3A504B; }
+.салон-красоты-3-hex { color: #0EF6bE; }
+.салон-красоты-4-hex { color: #F7F7F7; }
+.салон-красоты-1-hex { color: #190207; }
+.салон-красоты-2-hex { color: #5A082D; }
+.салон-красоты-3-hex { color: #9D0B28; }
+.салон-красоты-4-hex { color: #FF004D; } */
+
+.салон-красоты-1-hex { color: #EADFDC; }
+.салон-красоты-2-hex { color: #FF6B6B; }
+.салон-красоты-3-hex { color: #B61919; }
+.салон-красоты-4-hex { color: #012443; }
+
+
+
 
 html, body{
   font-family: 'PT Sans', sans-serif;
   height: 100%;
-  background: #912346;
+  background: #EADFDC;
 }
 .wrapper {
   min-height: 100%;
@@ -49,7 +130,6 @@ html, body{
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  
 }
 
 .container {
@@ -80,7 +160,7 @@ html, body{
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #131429;
+  background-color: #012443;
   z-index: 2;
 }
 
@@ -127,15 +207,14 @@ html, body{
 }
 
 .header__link {
-  color: white;
+  color: #F7F7F7;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 20px;
 }
 .header__link:hover {
-  color: #A58183;
+  color: #FF6B6B;
 }
-
 
 @media (max-width: 767px){
   body.lock{
@@ -216,7 +295,7 @@ html, body{
     left: 0;
     width: 100%;
     height: 100%;
-    background: #5ACB4A;
+    background: #012443;
     padding: 70px 20px 20px;
     transition: all 0.3s ease 0s;
     -webkit-transition: all 0.3s ease 0s;
@@ -225,6 +304,7 @@ html, body{
     -o-transition: all 0.3s ease 0s;
     overflow: auto;
   }
+
 .header__menu.active {
   top: 0;
 }
@@ -245,7 +325,6 @@ html, body{
 .content {}
 
 .content__text {
-  color: white;
   font-size: 20px;
   line-height: 20px;
   margin: 80px 0px 20px 0px;
@@ -290,17 +369,17 @@ html, body{
 }
 .greet__title {
   font-family: 'Poppins', sans-serif;
-  padding: 0 20px;
+  padding: 0 10px;
   text-align: center;
   font-size: 2rem;
 }
 .greet__text span{
   letter-spacing: 1.2;
   font-weight: 700;
-  color: #A60A0A;
+  color: #B61919;
   font-size: 2rem;
-
 }
+
 .content__text p{
   margin: 20px 10px;
 }
@@ -314,17 +393,19 @@ html, body{
   align-items: сenter;
 }
 .services__item {
+  text-align: center;
   border-radius: 10px;
   /* flex-direction: column; */
   margin: 10px;
   padding: 10px;
-  background:#CCA1B4;
+  background:#FF6B6B;
   flex: 1 1 25%;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
 }
+
 .services__image img{
   max-width: 150px;
   max-height: 100%;
@@ -333,18 +414,28 @@ html, body{
   padding: 20px 0;
 }
 h2 {
+  font-family: 'Poppins', sans-serif;
   text-align: center;
   margin: 10px 0;
 }
 .services__subtitle {
+  font-family: 'Poppins', sans-serif;
 }
+
+.салон-красоты-1-hex { color: #EADFDC; }
+.салон-красоты-2-hex { color: #FF6B6B; }
+.салон-красоты-3-hex { color: #B61919; }
+.салон-красоты-4-hex { color: #012443; }
+font-family: 'Poppins', sans-serif;
+
 .services__link {
   display: block;
-  background: #7E4C51;
-  color: white;
+  background: #B61919;
+  color: #fff;
   text-decoration: none;
   font-size: 20px;
-  padding: 5px;
+  margin: 10px;
+  padding: 15px;
   text-align: center;
   border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -352,10 +443,16 @@ h2 {
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
 }
+
 .workplace {
-  
+  margin: 20px 0px 20px 0px;
+width: 100%;
+}
+article{
+  height: 45%;
 }
 .container {
+
 }
 .leechtherapy,
 .revitalization,
@@ -366,11 +463,12 @@ h2 {
   display: flex;
 }
 .article__image {
+  margin: 0px 10px 0px 10px;
   flex: 1 1 50%;
 }
 .article__image img{
-  max-width: 100%;
-  min-height: 50vh;
+  width: 100%;
+  height: 60vh;
   object-fit: cover;
 } 
 .article__text {
@@ -380,7 +478,7 @@ h2 {
   margin: 10px;
   padding: 0 10px;
   flex: 1 1 50%;
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 
 .leftSide {
@@ -426,13 +524,18 @@ h2 {
 .footer {
   color: #fff;
   position: relative;
-  background: url('../img/services/мезотерапия2.webp') 0 0/cover no-repeat;
+  background: url('../img/services/мезотерапия2.webp') center 0/cover no-repeat;
 }
 .container {
 }
 .footer__body {
-  background-color: #730606b0;
+  border-radius: 10px;
+  background-color: #012443c7;
   display: flex;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 .footer__column {
   margin: 10px;
